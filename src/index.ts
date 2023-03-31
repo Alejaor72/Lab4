@@ -12,8 +12,9 @@ class AppContainer extends HTMLElement {
 
     async connectedCallback() {
         const datastar = await traer_api();
+        console.log("datastar",datastar)
         datastar.forEach((data: any) => {
-            console.log(data);
+            console.log("asdf",data);
         });
 
         datastar.forEach((data: any) => {
