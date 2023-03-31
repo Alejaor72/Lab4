@@ -1,4 +1,5 @@
 import "./components/export";
+import styles from "./components/Card/Card.css"
 import {traer_api} from "./components/dataCard"
 import Card, { Attribute } from "./components/Card/Card"
 
@@ -30,7 +31,7 @@ class AppContainer extends HTMLElement {
 
     render(StarWarsList:any) {
         const starCards = this.ownerDocument.createElement("section")
-        starCards.className = "StarSection"
+        starCards.className = "hpSection"
         this.StarWarsList.forEach((starCard) => {
             starCards.appendChild(starCard)
         });

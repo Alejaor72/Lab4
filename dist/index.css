@@ -1,0 +1,19 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+app-container{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin: 2%;
+}
+body{
+    font-family: 'Lexend', sans-serif;
+
+}
+h1{
+    margin: 2%;
+    color: rgb(95, 2, 2);
+}

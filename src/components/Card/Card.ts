@@ -1,3 +1,5 @@
+import styles from "./Card.css"
+
 export enum Attribute {
     "name" = "name",
     "gender" = "gender",
@@ -48,11 +50,17 @@ class Card extends HTMLElement {
 
         render() {
             if (this.shadowRoot) {
-                this.shadowRoot.innerHTML = `
+                this.shadowRoot.innerHTML = ``
+                
+                const css = this.ownerDocument.createElement("style");
+                css.innerHTML = styles;
+                this.shadowRoot?.appendChild(css);
+                 
+                this.shadowRoot.innerHTML += `
                 <link rel="stylesheet" href="">
                 <section>
-                <h1>Name: ${this.name}</h1>
-                <p>Role: ${this.gender}</p>
+                <h1>${this.name}</h1>
+                <p>Gender: ${this.gender}</p>
                 <p>House: ${this.house}</p>
                 <img src="${this.image}" alt="">
                 </section>

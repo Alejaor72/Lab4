@@ -1,0 +1,14 @@
+section{
+    font-family: 'Lexend', sans-serif;
+    width: 250px;
+    background-color: rgb(186, 185, 187);
+    margin: 1%;
+    padding: 2%;
+    border-radius: 10px;
+    margin-bottom:2%;
+}
+section img{
+    width: 100%;
+    object-fit: cover;
+
+}
