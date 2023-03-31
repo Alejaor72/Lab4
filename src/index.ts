@@ -21,6 +21,8 @@ class AppContainer extends HTMLElement {
             const starCard = this.ownerDocument.createElement("my-card") as Card;
               starCard.setAttribute(Attribute.gender, data.gender);
               starCard.setAttribute(Attribute.name, data.name);
+              starCard.setAttribute(Attribute.house, data.house);
+              starCard.setAttribute(Attribute.image, data.image);
                 this.StarWarsList.push(starCard);
         });
         this.render(this.StarWarsList);

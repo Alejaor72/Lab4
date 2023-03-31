@@ -1,17 +1,23 @@
 export enum Attribute {
     "name" = "name",
     "gender" = "gender",
+    "house" = "house",
+    "image" = "image"
 
 }
 
 class Card extends HTMLElement {
     name?: string;
     gender?: string;
+    house?: string;
+    image?: string;
 
     static get observedAttributes() {
         const attrs: Record<Attribute, null> = {
             gender: null,
             name: null,
+            house: null,
+            image: null
         };
         return Object.keys(attrs);
     }
@@ -47,6 +53,8 @@ class Card extends HTMLElement {
                 <section>
                 <h1>Name: ${this.name}</h1>
                 <p>Role: ${this.gender}</p>
+                <p>House: ${this.house}</p>
+                <img src="${this.image}" alt="">
                 </section>
                 `;
             }
